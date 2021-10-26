@@ -1,0 +1,266 @@
+:root {
+    /* Colors */
+    --dark-bg: #10121A;
+    --light-bg: #FFFFFA;
+    --green: #00FFA3;
+    --blue: #03E1FF;
+    --purple: #DC1FFF;
+
+    /* Fonts,Typographies and Spaces*/
+    --satoshi-font:'Satoshi', sans-serif;
+    --chillax-font: 'Chillax', sans-serif;;
+    --title-font-size: 15rem;
+    --subtitle-font-size: 7.5rem;
+    --heading-font-size: 2.5rem;
+    --text-font-size: 2rem;
+
+    /* Font weight */
+    --bold: 700;
+    --semi-bold: 500;
+    --medium: 400;
+    --regular: 300;
+    --light: 200;
+
+    /* Margin and padding */
+    --menu-space: 2em;
+
+    /* Z-index */
+    --z-fixed: 100;
+    --z-front: 10;
+    --z-behind: -10;
+}
+
+/* Resetting CSS */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+html {
+    /* I use 62.5% to set 1rem to 10px */
+    font-size: 62.5%;
+    font-family: var(--body-font);
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-bg);
+    font-family: var(--satoshi-font);
+}
+
+h1 {
+    font-family: var(--satoshi-font);
+    font-size: clamp(5rem, 10vw + 1rem, var(--title-font-size));
+    font-weight: var(--bold);
+    background: -webkit-linear-gradient(45deg, var(--purple) 30%, var(--blue) 50%, var(--green) 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    font-size: var(--text-font-size);
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-bg) !important;
+}
+
+.country {
+    position: absolute;
+    width: max(300px,60vw);
+    height: auto;
+    z-index: var(--z-behind);
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100vw;
+    z-index: var(--z-front);
+}
+
+nav li {
+    position: relative;
+    top: var(--menu-space);
+    left: 50%;
+}
+
+nav li,
+.social li {
+    display: inline;
+    list-style: none;
+    font-family: var(--chillax-font);
+    font-size: var(--text-font-size);
+    font-weight: var(--semi-bold);
+    padding: 2em;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+    font-size: var(--text-font-size);
+    font-family: var(--chillax-font);
+    font-weight: var(--semi-bold);
+    color: var(--dark-bg);
+    background-color: var(--light-bg); 
+    padding: 0.6em 1em;
+    margin: 0 auto;
+    border-radius: 100vw;
+    cursor: pointer;
+    border: solid var(--dark-bg) 2px;
+    transition: 0.5s;
+}
+
+button:hover {
+    color: var(--light-bg);
+    background-color: var(--dark-bg);
+    border: solid var(--light-bg) 2px;
+}
+
+#description {
+    text-align: center;
+}
+
+#description p {
+    width: 85vw;
+    padding: 2em 0 3em 0;
+    margin: 0 auto;
+}
+
+span {
+    width: 90vw;
+    height: 20px;
+    background: -webkit-linear-gradient(45deg, var(--purple) 30%, var(--blue) 50%, var(--green) 90%);
+}
+
+h2 {
+    font-size: var(--subtitle-font-size);
+    text-align: center;
+}
+
+.team {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 90vw;
+    padding-bottom: 5em;
+    margin: 0 auto;
+    border-bottom: solid var(--light-bg) 1px;
+}
+
+.member {
+    text-align: center;
+}
+
+.member img {
+    padding: 5em 0;
+}
+
+.member h3 {
+    font-size: var(--text-font-size);
+    padding-bottom: 0.75em;
+}
+
+.social {
+    display: inline;
+}
+
+#roadmap,
+#nextstep,
+#reward {
+    height: 100vh;
+}
+
+#nextstep p {
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+aside > p {
+    width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2.5em 0;
+}
+
+#roadmap p {
+    width: 80vw;
+    margin: 0 auto;
+    font-size: var(--heading-font-size);
+    padding: 1em;
+}
+
+#prizes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20em;
+}
+
+.competition {
+    text-align: center;
+    width: min(350px, 30vw);
+}
+
+.competition h3 {
+    padding: 1.5em 0;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+.square {
+    width: 32px;
+    height: 32px;
+    border: solid var(--light-bg) 2px;
+}
+
+.blue {
+    background-color: var(--blue);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.purple {
+    background-color: var(--purple);
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+    width: 650px;
+    height: 650px;
+}
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3em auto;
+}
