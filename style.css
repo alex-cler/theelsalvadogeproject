@@ -93,6 +93,8 @@ a {
 
 /* Navbar */
 nav {
+    position: absolute;
+    top: 5em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -117,17 +119,18 @@ header {
 }
 
 button {
+    /* display the button content correctly */
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    width: 250px;
+    justify-content: space-between;
+    width: 200px;
     font-size: var(--text-font-size);
     font-family: var(--chillax-font);
     font-weight: var(--semi-bold);
     color: var(--dark-bg);
     background-color: var(--light-bg); 
-    padding: 0.6em 1em;
+    padding: 0.5em 1.125em;
     border-radius: 100vw;
     cursor: pointer;
     transition: 0.5s;
@@ -138,8 +141,13 @@ button:hover {
     background-color: var(--dark-bg);
 }
 
+/* Important text */
+p span {
+    font-weight: var(--bold);
+    font-size: calc(var(--text-font-size) + 0.125rem);
+}
 
-span {
+span:not(p span) {
     width: 90vw;
     height: 20px;
     background: -webkit-linear-gradient(45deg, var(--purple) 30%, var(--blue) 50%, var(--green) 90%);
@@ -150,6 +158,20 @@ h2 {
     margin-top: 2em;
 }
 
+/* --- Mission SECTION--- */
+#mission p:first-of-type {
+    text-align: center;
+    font-weight: var(--semi-bold);
+    font-size: var(--heading-font-size);
+}
+
+#mission p {
+    line-height: 2em;
+    margin-top: 2.5em;
+}
+
+
+/* --- Meet the Team SECTION --- */
 .team {
     display: flex;
     flex-flow: row wrap;

@@ -29,7 +29,7 @@
             <ul>
                 <li><a href="#description">About us</a></li>
                 <li><a href="#roadmap">Roadmap</a></li>
-                <li><a href="#nextstep">Information</a></li>
+                <li><a href="#reward">Information</a></li>
                 <li><a href="#team">The Team</a></li>
             </ul>
         </nav>
@@ -42,15 +42,15 @@
         Adopters and well needed care to the street dogs in El Salvador.</p>
         <h2>Our Mission</h2>
         <img class="line" src="./assets/line.png" alt="Colorful line under each title">
-        <p>Open a self sustainable, carbon negative beach hotel and a dog sanctuary. Providing a 5 star
+        <p><span>Open a self sustainable, carbon negative beach hotel and a dog sanctuary</span>. Providing a 5 star
         hang out for visitors and a magnificent dog sanctuary to provide veterinary care, food and love for the
         street dogs of El Salvador.</p>
         <p>Solar panels will be installed on the roof and the adjacent land to provide renewable energy all year round.
         And over at the dog sanctuary, we will have a biomass boiler creating biochar to enhance the soil carbon
         levels and feed our trees from our piles of dogshit.</p>
         <p>The hotel will be open for bookings in 2022 with NFT holders getting priority and discounts.
-        10 selected NFT holders will receive an all-paid-for trip to the El Salvadoge beach hotel.</p>
-        <p>This is your chance to adopt an El Salvadoge and be involved in a truly special NFT project.</p>
+        10 selected NFT holders will receive an <span>all-paid-for trip to the El Salvadoge beach hotel.</span></p>
+        <p><span>This is your chance to adopt an El Salvadoge and be involved in a truly special NFT project.</span></p>
     </div>
     <section id="roadmap">
         <!-- <img src="./assets/roadmap.png" alt="Roadmap"> -->
@@ -213,6 +213,14 @@
             data: data,
 
         };
+
+        const action = {
+            name: 'Position: right',
+            handler(chart) {
+                chart.options.plugins.legend.position = 'right';
+                chart.update();
+            }
+        }
 
         const myChart = new Chart(
             document.getElementById('myChart'),
