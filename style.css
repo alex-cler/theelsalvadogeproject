@@ -199,8 +199,7 @@ h2 {
     display: inline;
 }
 
-#nextstep,
-#reward {
+#nextstep {
     height: 100vh;
 }
 
@@ -249,18 +248,24 @@ h3 {
     font-size: 2.5rem;
 }
 
-.square {
-    width: 32px;
-    height: 32px;
-    border: solid var(--light-bg) 2px;
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
 }
 
-.container {
-    display: grid;
-    place-items: center;
-    margin: 0 auto;
-    width: 650px;
-    height: 650px;
+.pie {
+    width: 400px;
+    height: 400px;
+    background: conic-gradient( var(--green) 0% 25%, var(--blue) 25% 50%, var(--purple) 50% 100%);
+    border-radius: 50%;
+}
+
+.information p {
+    width: 40vw;
+    padding: 1.5em;
 }
 
 footer {
