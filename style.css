@@ -55,10 +55,12 @@ body {
     font-family: var(--satoshi-font);
 }
 
+/* Title header */
 h1 {
     font-family: var(--satoshi-font);
     font-size: clamp(5rem, 10vw + 1rem, var(--title-font-size));
     font-weight: var(--bold);
+    text-align: center;
     background: -webkit-linear-gradient(45deg, var(--purple) 30%, var(--cyan) 50%, var(--green) 90%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -97,8 +99,7 @@ nav {
     align-items: center;
 }
 
-nav li,
-.social li {
+nav li {
     display: inline;
     list-style: none;
     font-family: var(--chillax-font);
@@ -137,15 +138,6 @@ button:hover {
     background-color: var(--dark-bg);
 }
 
-#description {
-    text-align: center;
-}
-
-#description p {
-    width: 85vw;
-    padding: 2em 0 3em 0;
-    margin: 0 auto;
-}
 
 span {
     width: 90vw;
@@ -322,4 +314,16 @@ footer {
 .purple {
     color: var(--purple);
     border-bottom: solid var(--purple) 3px;
+}
+
+/* --- Footer --- */
+
+.social li {
+    display: inline;
+    list-style: none;
+    font-family: var(--chillax-font);
+    font-size: var(--text-font-size);
+    font-weight: var(--semi-bold);
+    padding: 0 1em;
+    align-items: center;
 }
