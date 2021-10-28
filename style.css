@@ -2,8 +2,10 @@
     /* Colors */
     --dark-bg: #10121A;
     --light-bg: #FFFFFA;
-    --green: #00FFA3;
-    --blue: #03E1FF;
+    --green: #00ffa3;
+    --cyan: #03E1FF;
+    --blue: #5189ee;
+    --mauve: #965fff;
     --purple: #DC1FFF;
 
     /* Fonts,Typographies and Spaces*/
@@ -57,14 +59,22 @@ h1 {
     font-family: var(--satoshi-font);
     font-size: clamp(5rem, 10vw + 1rem, var(--title-font-size));
     font-weight: var(--bold);
-    background: -webkit-linear-gradient(45deg, var(--purple) 30%, var(--blue) 50%, var(--green) 90%);
+    background: -webkit-linear-gradient(45deg, var(--purple) 30%, var(--cyan) 50%, var(--green) 90%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px white;
+    z-index: var(--z-front);
+}
+
+h2,
+h3 {
+    text-transform: uppercase;
 }
 
 p {
     font-size: var(--text-font-size);
+    font-weight: var(--light);
 }
 
 a {
@@ -81,17 +91,10 @@ a {
 
 /* Navbar */
 nav {
-    position: fixed;
-    top: 0;
-    height: 100px;
-    width: 100vw;
-    z-index: var(--z-front);
-}
-
-nav li {
-    position: relative;
-    top: var(--menu-space);
-    left: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav li,
@@ -101,7 +104,7 @@ nav li,
     font-family: var(--chillax-font);
     font-size: var(--text-font-size);
     font-weight: var(--semi-bold);
-    padding: 2em;
+    padding: 0 2em;
 }
 
 header {
@@ -124,17 +127,14 @@ button {
     color: var(--dark-bg);
     background-color: var(--light-bg); 
     padding: 0.6em 1em;
-    margin: 0 auto;
     border-radius: 100vw;
     cursor: pointer;
-    border: solid var(--dark-bg) 2px;
     transition: 0.5s;
 }
 
 button:hover {
     color: var(--light-bg);
     background-color: var(--dark-bg);
-    border: solid var(--light-bg) 2px;
 }
 
 #description {
@@ -155,7 +155,7 @@ span {
 
 h2 {
     font-size: var(--subtitle-font-size);
-    text-align: center;
+    margin-top: 2em;
 }
 
 .team {
@@ -211,6 +211,11 @@ aside > p {
     padding: 1em;
 }
 
+.roadmap {
+    width: 100vw;
+    height: auto;
+}
+
 #prizes {
     display: flex;
     flex-flow: row wrap;
@@ -237,18 +242,6 @@ h3 {
     border: solid var(--light-bg) 2px;
 }
 
-.blue {
-    background-color: var(--blue);
-}
-
-.green {
-    background-color: var(--green);
-}
-
-.purple {
-    background-color: var(--purple);
-}
-
 .container {
     display: grid;
     place-items: center;
@@ -263,4 +256,70 @@ footer {
     justify-content: space-around;
     align-items: center;
     margin: 3em auto;
+}
+
+.mobile {
+    display: none;
+}
+
+/* --- Next Steps --- */
+#mission,
+#nextsteps,
+#reward,
+#team,
+#competitions {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.line {
+    width: 500px;
+    height: 40px;
+}
+
+.columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.block {
+    width: 25vw;
+    min-width: 180px;
+    margin: 2em;
+}
+
+.block h3 {
+    font-weight: var(--semi-bold);
+    margin: 0.5em 0;
+    width: fit-content;
+}
+
+.block p {
+    padding-top: 1em;
+}
+
+.green {
+    color: var(--green);
+    border-bottom: solid var(--green) 3px;
+}
+
+.cyan {
+    color: var(--cyan);
+    border-bottom: solid var(--cyan) 3px;
+}
+
+.blue {
+    color: var(--blue);
+    border-bottom: solid var(--blue) 3px;
+}
+
+.mauve {
+    color: var(--mauve);
+    border-bottom: solid var(--mauve) 3px;
+}
+
+.purple {
+    color: var(--purple);
+    border-bottom: solid var(--purple) 3px;
 }
