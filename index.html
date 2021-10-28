@@ -10,6 +10,7 @@
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
     <title>El Salvadoge</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.png">
     <link href="style.css" rel="stylesheet"><!-- "/static/css/main.76598800.chunk.css" -->
     <link
         href="https://api.fontshare.com/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&f[]=chillax@200,300,400,500,700&display=swap"
@@ -53,7 +54,8 @@
         <p><span>This is your chance to adopt an El Salvadoge and be involved in a truly special NFT project.</span></p>
     </div>
     <section id="roadmap">
-        <!-- <img src="./assets/roadmap.png" alt="Roadmap"> -->
+        <h2>Roadmap</h2>
+        <img class="line" src="./assets/line.png" alt="Colorful line under each title">
         <div class="mobile">
             <!-- Only available on mobile -->
             <p>1 • Adoption will go live on the 7th November 2021, be ready to save the dogs.</p>
@@ -67,8 +69,8 @@
             <p>5 • Community wallet updated with 25% of the profit from your adoptions. 75%</p>
             <p>6 • We will buy premises for The El Salvadoge Hotel . 100%</p>
         </div>
-        <img class="roadmap" src="./assets/salvadogeroadmap.png" alt="Roadmap">
-    </section>
+    </section>    
+    <img class="roadmap" src="./assets/salvadogeroadmap.png" alt="Roadmap">
     <section id="nextsteps">
         <h2>Next Steps</h2>
         <img class="line" src="./assets/line.png" alt="Colorful line under each title">
@@ -112,7 +114,7 @@
         <h2>Rewards and Incentives</h2>
         <img class="line" src="./assets/line.png" alt="Colorful line under each title">
         <div class="container">
-            <canvas id="myChart"></canvas>
+            <div id="pie"></div>
         </div>
         <!-- <p>Royalties -50% of royalties will be given as weekly prizes to NFT holders. The remaining 50% of the royalties, we will
         HODL at the El Salvadoge project.
@@ -188,45 +190,6 @@
     </script>
     <script src="/static/js/2.c097e81c.chunk.js"></script>
     <script src="/static/js/main.02cdc8fc.chunk.js"></script>
-    <script>
-        // === include 'setup' then 'config' above ===
-        const data = {
-            labels: [
-                '50% Of total adoptions will go to the El Salvadoge Project',
-                '25% Will be used to pay off our debts and Hodl the rest until the moon',
-                '25% Will be Stored in the community wallet for the online progression of the project, rewards and marketing initiatives'
-            ],
-            datasets: [{
-                label: 'My First Dataset',
-                data: [50, 25, 25],
-                backgroundColor: [
-                    '#DC1FFF',
-                    '#00FFA3',
-                    '#03E1FF'
-                ],
-                hoverOffset: 2
-            }]
-        };
-
-        const config = {
-            type: 'doughnut',
-            data: data,
-
-        };
-
-        const action = {
-            name: 'Position: right',
-            handler(chart) {
-                chart.options.plugins.legend.position = 'right';
-                chart.update();
-            }
-        }
-
-        const myChart = new Chart(
-            document.getElementById('myChart'),
-            config
-        );
-    </script>
 </body>
 
 </html>
