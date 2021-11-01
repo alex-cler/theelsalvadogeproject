@@ -6,10 +6,12 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
+    <meta name="description"
+        content="Here at the El Salvadoge Project we are passionate about creating something uniquely special. We are creating a truly innovative 
+        project that provides real world intrinsic value to the community of our NFT Adopters and well needed care to the street dogs in El Salvador." />
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
-    <title>El Salvadoge</title>
+    <title>El Salvadoge Project</title>
     <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.png">
     <link href="style.css" rel="stylesheet"><!-- "/static/css/main.76598800.chunk.css" -->
     <link
@@ -21,42 +23,54 @@
 <body>
     <header>
         <nav>
+            <p>El Salvadoge Project</p>
+            <ul>
+                <li><a href="#description">Our Mission</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#reward">Information</a></li>
+                <li><a href="#description">Rewards and Competitions</a></li>
+                <li><a href="#team">The Team</a></li>
+            </ul>
+        </nav>
+        <img class="salvadoge" src="./assets/Salvadoge.png" alt="Salvadoge with a happy face">
+        <div class="introduction">
+            <h1>El Salvadoge Project</h1>
+            <p>The NFT project with a true purpose.<br>#Savethefuckingdogs</p>
             <a href="https://discord.gg/AJ8dwke3">
                 <button>
                     Join Discord
                     <img src="./assets/Discord.png" alt="Discord Logo" width="32px" height="32px">
                 </button>
             </a>
-            <ul>
-                <li><a href="#description">About us</a></li>
-                <li><a href="#roadmap">Roadmap</a></li>
-                <li><a href="#reward">Information</a></li>
-                <li><a href="#team">The Team</a></li>
-            </ul>
-        </nav>
-        <h1>The El Salvadoge Project</h1>
-        <img class="country" src="./assets/Salvador.svg" alt="Salvador Map Country">
+        </div>
     </header>
-    <div id="mission">
+    <div id="about_us">
+        <h2>About us</h2>
         <p>Here at the El Salvadoge Project we are passionate about creating something uniquely special. We are
-        creating a truly innovative project that provides real world intrinsic value to the community of our NFT
-        Adopters and well needed care to the street dogs in El Salvador.</p>
-        <h2>Our Mission</h2>
-        <img class="line" src="./assets/line.png" alt="Colorful line under each title">
-        <p><span>Open a self sustainable, carbon negative beach hotel and a dog sanctuary</span>. Providing a 5 star
-        hang out for visitors and a magnificent dog sanctuary to provide veterinary care, food and love for the
-        street dogs of El Salvador.</p>
-        <p>Solar panels will be installed on the roof and the adjacent land to provide renewable energy all year round.
-        And over at the dog sanctuary, we will have a biomass boiler creating biochar to enhance the soil carbon
-        levels and feed our trees from our piles of dogshit.</p>
-        <p>The hotel will be open for bookings in 2022 with NFT holders getting priority and discounts.
-        10 selected NFT holders will receive an <span>all-paid-for trip to the El Salvadoge beach hotel.</span></p>
-        <p><span>This is your chance to adopt an El Salvadoge and be involved in a truly special NFT project.</span></p>
+            creating a truly innovative project that provides real world intrinsic value to the community of our NFT
+            Adopters and well needed care to the street dogs in El Salvador.</p>
     </div>
-    <section id="roadmap">
+    <div id="mission">
+        <h2>Our Mission</h2>
+        <div class="wrapper">
+            <img class="salvadoge" src="./assets/Salvadogeflag.png" alt="Salvadoge with a Salvador flag">
+            <div class="mission-text">
+                <p><span>Open a self sustainable, carbon negative beach hotel and a dog sanctuary</span>. Providing a 5 star
+                    hang out for visitors and a magnificent dog sanctuary to provide veterinary care, food and love for the
+                    street dogs of El Salvador.</p>
+                <p>Solar panels will be installed on the roof and the adjacent land to provide renewable energy all year round.
+                    And over at the dog sanctuary, we will have a biomass boiler creating biochar to enhance the soil carbon
+                    levels and feed our trees from our piles of dogshit.</p>
+                <p>The hotel will be open for bookings in 2022 with NFT holders getting priority and discounts.
+                    10 selected NFT holders will receive an <span>all-paid-for trip to the El Salvadoge beach hotel.</span></p>
+                <p><span>This is your chance to adopt an El Salvadoge and be involved in a truly special NFT project.</span></p>
+            </div>
+        </div>
+    </div>
+    <section id="roadmap" class="mobile">
         <h2>Roadmap</h2>
         <img class="line" src="./assets/line.png" alt="Colorful line under each title">
-        <div class="mobile">
+        <div>
             <!-- Only available on mobile -->
             <p>1 • Adoption will go live on the 7th November 2021, be ready to save the dogs.</p>
             <p>2 • First and most important, we want to honour or promise to help the dogs so, $20,000 will be shared
@@ -69,11 +83,10 @@
             <p>5 • Community wallet updated with 25% of the profit from your adoptions. 75%</p>
             <p>6 • We will buy premises for The El Salvadoge Hotel . 100%</p>
         </div>
-    </section>    
-    <img class="roadmap" src="./assets/salvadogeroadmap.png" alt="Roadmap">
+    </section>
+    <img class="roadmap" src="./assets/roadmap.png" alt="Roadmap">
     <section id="nextsteps">
         <h2>Next Steps</h2>
-        <img class="line" src="./assets/line.png" alt="Colorful line under each title">
         <div class="columns">
             <div class="block">
                 <h3 class="green">Make it Green</h3>
@@ -111,14 +124,16 @@
         </div>
     </section>
     <section id="reward">
-        <h2>Rewards and Incentives</h2>
-        <img class="line" src="./assets/line.png" alt="Colorful line under each title">
+        <h2>Information</h2>
         <div class="container">
             <div class="pie"></div>
             <div class="information">
-                <p><span style="color: var(--purple);">•</span> 50% Of total adoptions will go to the El Salvadoge Project.</p>
-                <p><span style="color: var(--blue);">•</span> 25% Will be used to pay off our debts and Hodl the rest until the moon.</p>
-                <p><span style="color: var(--green);">•</span> 25% Will be Stored in the community wallet for the online progression of the project, rewards and marketing initiatives.</p>
+                <p><span style="color: var(--purple);">•</span> 50% Of total adoptions will go to the El Salvadoge
+                    Project.</p>
+                <p><span style="color: var(--blue);">•</span> 25% Will be used to pay off our debts and Hodl the rest
+                    until the moon.</p>
+                <p><span style="color: var(--green);">•</span> 25% Will be Stored in the community wallet for the online
+                    progression of the project, rewards and marketing initiatives.</p>
             </div>
         </div>
         <!-- <p>Royalties -50% of royalties will be given as weekly prizes to NFT holders. The remaining 50% of the royalties, we will
@@ -126,56 +141,60 @@
         </p> -->
     </section>
     <aside id="competitions">
-        <h2>Competitions</h2>
-        <img class="line" src="./assets/line.png" alt="Colorful line under each title">
-        <p>Here at the El Salvadoge project we like giving back to the people helping us on our mission so we have
-            set up a few Prize pools and competitions for our NFT Community.</p>
-        <div>
-            <!-- <div class="competition">
-                <img src="./assets/Poster.png" alt="Image Logo" width="75px" height="75px">
+        <h2>Rewards and Competitions</h2>
+        <ul>
+            <li>Here at the El Salvadoge project we like giving back to the people helping us on our mission so we have
+            set up a few Prize pools and competitions for our NFT Community.</li>
+            <li>First 250 Buyers will receive a Special Prize</li>
+            <li>First 1000 Buyers Receiving Exclusive Free Merch Packages</li>
+            <li>First 1420 Buyers will receive a lottery ticket for a huge $100,420.69</li>
+            <li>First 2500 Buyers will In a Lottery Draw for $25,000 and 1 All inclusive trip to our El Salvadoge Hotel</li>
+            <li>First 4000 Buyers Will be in a Lottery Draw for $10,000 and 10 NFT Airdrop</li>
+        </ul>
+        <h4>10 Holders upon full adoption will receive an all inclusive trip to our El Salvadoge Hotel.
+            Prizes and lottery draws will be completed as adopter numbers are reached.
+        </h4>
+        <div class="categories">
+            <div class="competition">
+                <img src="./assets/DiscordIMG.jpg" alt="Discord image" width="200px" height="200px">
+                <h3>Discord Competition</h3>
+                <p>Top 3 Most Voted for community members in the discord will receive $5,000 .</p>
+            </div>
+            <div class="competition">
+                <img src="./assets/PosterIMG.jpg" alt="Poster image with vivid color" width="200px" height="200px">
                 <h3>Poster Competition</h3>
                 <p>Three Photographs of the Best Placed El Salvadoge Poster around the world will have $5,000 Prizes. 
                 If you don't have a poster you can get one here.</p>
             </div>
             <div class="competition">
-                <img src="./assets/Paint.png" alt="Paint Logo" width="75px" height="75px">
+                <img src="./assets/DrawingIMG.jpg" alt="Drawing Salvadoge image" width="200px" height="200px">
                 <h3>Art Competition</h3>
                 <p>We want to see drawings, paintings, murals, videos and all kinds of artistic impressions of our dogs -
                     Three Winners will receive $5,000.</p>
             </div>
-            <div class="competition">
-                <img src="./assets/Discord.png" alt="Logo Discord" width="75px" height="75px">
-                <h3>Discord Competition</h3>
-                <p>Top 3 Most Voted for community members in the discord will receive $5,000 .</p>
-            </div> -->
         </div>
-        <p>First 250 Buyers will receive a Special Prize</p>
-        <p>First 1000 Buyers Receiving Exclusive Free Merch Packages</p>
-        <p>First 1420 Buyers will receive a lottery ticket for a huge $100,420.69</p>
-        <p>First 2500 Buyers will In a Lottery Draw for $25,000 and 1 All inclusive trip to our El Salvadoge Hotel</p>
-        <p>First 4000 Buyers Will be in a Lottery Draw for $10,000 and 10 NFT Airdrop</p>
-        <h3>10 Holders upon full adoption will receive an all inclusive trip to our El Salvadoge Hotel.
-            Prizes and lottery draws will be completed as adopter numbers are reached.
-        </h3>
     </aside>
     <article id="team">
         <h2>Meet the Team</h2>
-        <img class="line" src="./assets/line.png" alt="Colorful line under each title">
         <div class="team">
             <div class="member">
                 <img src="./assets/WillNFT.jpeg" alt="Will NFT" width="280px" height="auto">
                 <h3>Will</h3>
-                <p>Savaldoge's CEO</p>
+                <p>Founder and CEO. Rescuing dogs since 1994. Recovering degenerate trader. Dreaming about using crypto
+                    to create a better world.</p>
             </div>
             <div class="member">
                 <img src="./assets/Julie.jpeg" alt="Julie NFT" width="280px" height="auto">
                 <h3>Maria</h3>
-                <p>Blockchain expert</p>
+                <p>Artist and marketing advisor.
+                    Used to draw Pikachus on the school tables and ran the memes page of her University. Now doing a PhD
+                    but not sure why.</p>
             </div>
             <div class="member">
                 <img src="./assets/AlexNFT.jpeg" alt="Alex NFT" width="280px" height="auto">
                 <h3>Alex</h3>
-                <p>Webdesigner</p>
+                <p>Webdesigner. Former obsessive gamer. Function better when fed, enjoy any cocktail only if it's in a
+                    fancy glass.</p>
             </div>
         </div>
     </article>
