@@ -103,7 +103,7 @@ a {
 }
 
 .salvadoge {
-    width: clamp(300px,45vw,1200px);
+    width: max(300px, 45vw);
     height: auto;
 }
 
@@ -134,8 +134,8 @@ header {
 }
 
 .introduction {
-    width: 35vw;
-    height: 100vh;
+    width: max(300px, 35vw);
+    /* height: 100vh; */
     display: flex;
     flex-flow: wrap;
     align-content: center;
@@ -156,16 +156,12 @@ button {
     font-size: var(--text-font-size);
     font-family: var(--chillax-font);
     font-weight: var(--semi-bold);
-    color: var(--dark-bg);
-    background-color: var(--light-bg); 
+    color: var(--light-bg);
+    background: linear-gradient(45deg, var(--purple) 30%, var(--blue) 50%, var(--green) 90%);
     padding: 0.5em 1.125em;
     border-radius: 100vw;
     cursor: pointer;
     transition: 0.5s;
-}
-
-button:hover {
-    background: linear-gradient(45deg, var(--purple) 30%, var(--blue) 50%, var(--green) 90%);
 }
 
 /* Important text */
@@ -223,6 +219,11 @@ span:not(p span) {
 #mission p {
     line-height: 1.5em;
     margin-top: 2em;
+}
+
+.salvadoge-flag {
+    height: max(250px, 70vh);
+    width: auto;
 }
 
 /* --- Competitions and Rewards --- */
@@ -439,8 +440,25 @@ footer {
         display: inline;
     }
 
+    /* nav li {
+        display: none;
+    } */
+
     header {
         align-content: center;
+    }
+
+    header .salvadoge {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .introduction {
+        margin-bottom: 20em;
+    }
+
+    .introduction p {
+        margin: 1em auto;
     }
 
     .roadmap,
@@ -462,5 +480,10 @@ footer {
     .pie {
         width: 280px;
         height: 280px;
+        margin: 2em auto;
+    }
+
+    #competitions li {
+        line-height: 2em;
     }
 }
