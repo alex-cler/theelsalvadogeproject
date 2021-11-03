@@ -15,6 +15,7 @@
     --heading-font-size: 2.5rem;
     --text-font-size: 2rem;
     --navbar-font-size: 1.5rem;
+    --legend-font-size: 1.5rem;
 
     /* Font weight */
     --bold: 700;
@@ -170,7 +171,7 @@ button:hover {
 /* Important text */
 p span {
     font-weight: var(--bold);
-    font-size: calc(var(--text-font-size) + 0.125rem);
+    font-size: calc(var(--text-font-size) + 0.05rem);
 }
 
 span:not(p span) {
@@ -205,7 +206,6 @@ span:not(p span) {
 
 /* --- Mission SECTION--- */
 .wrapper {
-    height: 100vh;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -214,14 +214,10 @@ span:not(p span) {
 }
 
 .mission-text {
-    width: 35vw;
+    /* Minimum of 280px otherwise 35vw of the screen */
+    width: max(280px, 35vw);
     text-align: left;
-}
-
-#mission p:first-of-type {
-    text-align: center;
-    font-weight: var(--semi-bold);
-    font-size: var(--heading-font-size);
+    font-weight: var(--regular);
 }
 
 #mission p {
@@ -354,7 +350,8 @@ h3 {
 }
 
 .information p {
-    width: 40vw;
+    width: max(300px, 40vw);
+    font-size: var(--legend-font-size);
     padding: 1.5em;
 }
 
@@ -375,7 +372,7 @@ h3 {
 }
 
 .block {
-    width: 25vw;
+    width: max(280px, 25vw);
     min-width: 180px;
     margin: 2em;
 }
@@ -449,5 +446,21 @@ footer {
     .roadmap,
     .desktop {
         display: none;
+    }
+
+    .roadmap-line {
+        border-left: dashed var(--purple) 10px;
+        width: 80vw;
+        margin: 0 auto;
+        padding: 0.5em 1.5em;
+    }
+
+    .roadmap-line p {
+        margin: 1.5em auto;
+    }
+
+    .pie {
+        width: 280px;
+        height: 280px;
     }
 }
