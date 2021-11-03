@@ -17,13 +17,15 @@
     <link
         href="https://api.fontshare.com/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&f[]=chillax@200,300,400,500,700&display=swap"
         rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+    <!-- Smooth Scroll Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <p>El Salvadoge Project</p>
+            <p class="desktop">El Salvadoge Project</p>
+            <img class="mobile" src="./assets/favicon.png" alt="Salvadoge" width="32px" height="32px">
             <ul>
                 <li><a href="#mission">Our Mission</a></li>
                 <li><a href="#roadmap">Roadmap</a></li>
@@ -39,7 +41,7 @@
             <a href="https://discord.gg/AJ8dwke3">
                 <button>
                     Join Discord
-                    <img src="./assets/Discord.png" alt="Discord Logo" width="32px" height="32px">
+                    <img src="./assets/discord-icon-black.svg" alt="Black Discord Logo" width="24px" height="24px">
                 </button>
             </a>
         </div>
@@ -69,7 +71,6 @@
     </div>
     <section class="mobile">
         <h2>Roadmap</h2>
-        <img class="line" src="./assets/line.png" alt="Colorful line under each title">
         <div>
             <!-- Only available on mobile -->
             <p>1 • Adoption will go live on the 7th November 2021, be ready to save the dogs.</p>
@@ -142,9 +143,9 @@
     </section>
     <aside id="competitions">
         <h2>Rewards and Competitions</h2>
+        <p>Here at the El Salvadoge project we like giving back to the people helping us on our mission so we have
+        set up a few Prize pools and competitions for our NFT Community.</p>
         <ul>
-            <li>Here at the El Salvadoge project we like giving back to the people helping us on our mission so we have
-            set up a few Prize pools and competitions for our NFT Community.</li>
             <li>First 250 Buyers will receive a Special Prize</li>
             <li>First 1000 Buyers Receiving Exclusive Free Merch Packages</li>
             <li>First 1420 Buyers will receive a lottery ticket for a huge $100,420.69</li>
@@ -162,13 +163,13 @@
             </div>
             <div class="competition">
                 <img src="./assets/PosterIMG.jpg" alt="Poster image with vivid color" width="200px" height="200px">
-                <h3>Poster Competition</h3>
+                <h3>Art Competition</h3>
                 <p>Three Photographs of the Best Placed El Salvadoge Poster around the world will have $5,000 Prizes. 
                 If you don't have a poster you can get one here.</p>
             </div>
             <div class="competition">
                 <img src="./assets/DrawingIMG.jpg" alt="Drawing Salvadoge image" width="200px" height="200px">
-                <h3>Art Competition</h3>
+                <h3>Drawing Competition</h3>
                 <p>We want to see drawings, paintings, murals, videos and all kinds of artistic impressions of our dogs -
                     Three Winners will receive $5,000.</p>
             </div>
@@ -198,13 +199,19 @@
             </div>
         </div>
     </article>
+    <div id="contact">
+        <h2>Contact us</h2>
+        <p>If you have any questions, reach out on any of our platforms below! See you soon in El Salvador.
+            <a href="mailto:ElSalvadogeProject@protonmail.com?subject=How can we help you ?">ElSalvadogeProject@protonmail.com</a>
+        </p>
+    </div>
     <footer>
         <ul class="social">
             <li>Follow us on :</li>
-            <li><a href="https://twitter.com/salvadogeel?s=11"><img src="./assets/Twitter.png" alt="Twitter Logo"
-                        width="40px" height="40px"></a></li>
-            <li><a href="https://discord.gg/AJ8dwke3"><img src="./assets/Discord.png" alt="Discord Logo" width="40px"
-                        height="40px"></a></li>
+            <li><a href="https://twitter.com/salvadogeel?s=11"><img src="./assets/twitter-white.svg" alt="White Twitter Logo"
+                        width="24px" height="24px"></a></li>
+            <li><a href="https://discord.gg/AJ8dwke3"><img src="./assets/discord-icon-white.svg" alt="White Discord Logo" width="24px"
+                        height="24px"></a></li>
         </ul>
         <p>© El Salvadoge Copyright 2021</p>
     </footer>
@@ -214,6 +221,32 @@
     </script>
     <script src="/static/js/2.c097e81c.chunk.js"></script>
     <script src="/static/js/main.02cdc8fc.chunk.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (1500) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1500, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
 </body>
 
 </html>

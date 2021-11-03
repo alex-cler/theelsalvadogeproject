@@ -10,11 +10,11 @@
 
     /* Fonts,Typographies and Spaces*/
     --satoshi-font:'Satoshi', sans-serif;
-    --chillax-font: 'Chillax', sans-serif;;
     --title-font-size: 10rem;
     --subtitle-font-size: 7.5rem;
     --heading-font-size: 2.5rem;
     --text-font-size: 2rem;
+    --navbar-font-size: 1.5rem;
 
     /* Font weight */
     --bold: 700;
@@ -24,7 +24,7 @@
     --light: 200;
 
     /* Margin and padding */
-    --menu-space: 2em;
+    --menu-space: 4em;
 
     /* Z-index */
     --z-fixed: 100;
@@ -56,6 +56,17 @@ body {
     overflow-x: hidden;
 }
 
+/* All Title and Content */
+#mission,
+#roadmap,
+#nextsteps,
+#reward,
+#team,
+#competitions {
+    width: 90vw;
+    margin: 0 auto;
+}
+
 /* Title header */
 h1 {
     font-family: var(--satoshi-font);
@@ -67,6 +78,8 @@ h1 {
 h2 {
     text-align: center;
     font-weight: var(--medium);
+    font-size: clamp(2.75rem, 10vw + 1rem, 8rem);
+    margin-top: 2em;
 }
 
 h3 {
@@ -89,37 +102,33 @@ a {
 }
 
 .salvadoge {
-    width: 45vw;
+    width: clamp(300px,45vw,1200px);
     height: auto;
 }
 
 /* Navbar */
 nav {
     position: absolute;
-    top: 5em;
-    width: 100vw;
+    top: var(--menu-space);
+    width: 90vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-
-/* nav ul {
-    padding: 0 5em;
-} */
 
 nav li {
     display: inline;
     list-style: none;
-    font-family: var(--chillax-font);
-    font-size: var(--text-font-size);
-    font-weight: var(--semi-bold);
+    font-family: var(--satoshi-font);
+    font-size: var(--navbar-font-size);
+    font-weight: var(--regular);
     padding: 0 0.5em;
 }
 
 header {
     height: 100vh;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap-reverse;
     justify-content: space-around;
 }
 
@@ -155,8 +164,7 @@ button {
 }
 
 button:hover {
-    color: var(--light-bg);
-    background-color: var(--dark-bg);
+    background: linear-gradient(45deg, var(--purple) 30%, var(--blue) 50%, var(--green) 90%);
 }
 
 /* Important text */
@@ -171,26 +179,28 @@ span:not(p span) {
     background: -webkit-linear-gradient(45deg, var(--purple) 30%, var(--blue) 50%, var(--green) 90%);
 }
 
-h2 {
-    font-size: var(--subtitle-font-size);
-    margin-top: 2em;
-}
+/* --- About us and Contact--- */
 
-/* --- About us --- */
-
-#about_us {
-    width: 70vw;
+#about_us,
+#contact {
+    width: 80vw;
     text-align: left;
     margin: 0 auto;
 }
 
-#about_us h2 {
+#about_us h2,
+#contact h2 {
     text-align: left;
     padding-bottom: 0.5em;
 }
 
-#about_us p {
+#about_us p,
+#contact p {
     line-height: 2em;
+}
+
+#contact a {
+    text-decoration: underline;
 }
 
 /* --- Mission SECTION--- */
@@ -229,8 +239,8 @@ h2 {
 
 .competition {
     text-align: center;
-    width: min(350px, 30vw);
-    margin: 5em 2em;
+    width: max(300px, 30vw);
+    margin: 5em auto;
 }
 
 .competition img {
@@ -261,7 +271,7 @@ h2 {
     width: 90vw;
     padding-bottom: 5em;
     margin: 0 auto;
-    border-bottom: solid var(--light-bg) 1px;
+    /* border-bottom: solid var(--light-bg) 1px; */
 }
 
 .member {
@@ -327,6 +337,7 @@ h3 {
     font-size: 2.5rem;
 }
 
+/* --- Information --- */
 .container {
     display: flex;
     flex-flow: row wrap;
@@ -347,34 +358,16 @@ h3 {
     padding: 1.5em;
 }
 
-footer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin: 3em auto;
-}
-
 .mobile {
     display: none;
 }
 
-/* --- Next Steps --- */
-#mission,
-#roadmap,
-#nextsteps,
-#reward,
-#team,
-#competitions {
-    width: 90vw;
-    margin: 0 auto;
-}
-
-.line {
+/* .line {
     width: 500px;
     height: 40px;
-}
+} */
 
+/* --- Next Steps --- */
 .columns {
     display: flex;
     flex-flow: row wrap;
@@ -422,14 +415,39 @@ footer {
     border-bottom: solid var(--purple) 3px;
 }
 
-/* --- Footer --- */
+/* --- Contact --- */
 
+
+/* --- Footer --- */
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 7.5em auto;
+}
 .social li {
     display: inline;
     list-style: none;
     font-family: var(--chillax-font);
     font-size: var(--text-font-size);
     font-weight: var(--semi-bold);
-    padding: 0 1em;
+    padding: 0 0.5em;
     align-items: center;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 720px) {
+    .mobile {
+        display: inline;
+    }
+
+    header {
+        align-content: center;
+    }
+
+    .roadmap,
+    .desktop {
+        display: none;
+    }
 }
